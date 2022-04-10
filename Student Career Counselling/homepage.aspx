@@ -3,7 +3,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section>
-      <img src="imgs/Career%20counselling.jpg" class="img-fluid"/>
+        <center>
+            <img src="imgs/perfecto.jpg" class="img-fluid"/>
+        </center>  
    </section>
 
    <section>
@@ -19,21 +21,21 @@
          <div class="row">
             <div class="col-md-4">
                <center>
-                  <img width="150px" src="imgs/counselling.png"/>
+                  <img src="imgs/counselling.png" alt="HTML Icon"; Width="150"; />
                   <h4>Digital Student Counselling</h4>
                   <p class="text-justify">We provide suggestion to students about what kinds of course will be better for their higher student. As we know that the studies after ten plus two are importatnt for the courses we want to study for the higher studies.</p>
                </center>
             </div>
             <div class="col-md-4">
                <center>
-                  <img width="150px" src="imgs/college.png"/>
+                  <img src="imgs/college.png" alt="HTML Icon"; Width="150"; />
                   <h4>Best Colleges For The Student</h4>
                   <p class="text-justify">We provide the students the option of the best colleges for the courses they wanted to study for their higher studies.</p>
                </center>
             </div>
             <div class="col-md-4">
                <center>
-                  <img width="150px" src="imgs/courses.jfif"/>
+                  <img src="imgs/courses.jfif" alt="HTML Icon"; Width="150"; />
                   <h4>Details of the Courses</h4>
                   <p class="text-justify">Sometimes students are unaware about what kind of options will be leaded by the courses that they are going to study for +2. We will provide every details about every courses allows to the student and which course will be better as per their plannings for the higher studies.</p>
                </center>
@@ -43,7 +45,9 @@
    </section>
 
    <section>
-      <img src="imgs/Career%20counselling.jpg" class="img-fluid"/>
+       <center>
+           <img src="imgs/clear.jfif" class="img-fluid"/>
+       </center>
    </section>
 
    <section>
@@ -59,21 +63,21 @@
          <div class="row">
             <div class="col-md-4">
                <center>
-                  <img width="150px" src="imgs/memberSignUp.jfif" />
+                  <img src="imgs/memberSignUp.jfif" alt="HTML Icon"; Width="150"; />
                   <h4>Sign Up</h4>
                   <p class="text-justify">To get access to all the facilities of the student carrer counselling websites, one should sign up. Once you are signed up for the application you will get to know more about the things available.</p>
                </center>
             </div>
             <div class="col-md-4">
                <center>
-                  <img width="150px" src="imgs/courses.jfif"/>
+                  <img src="imgs/courses.jfif" alt="HTML Icon"; Width="150"; />
                   <h4>Search Courses</h4>
                   <p class="text-justify">Students can make their researches about the courses they want to study so that they can fulfil their dreams truly. Sometimes students are unaware about the details which leads them to choose different course which affects their future.</p>
                </center>
             </div>
             <div class="col-md-4">
                <center>
-                  <img width="150px" src="imgs/visit.png"/>
+                  <img src="imgs/visit.png" alt="HTML Icon"; Width="150"; />
                   <h4>Visit Us</h4>
                   <p class="text-justify">If you have any queries or whether you have something to ask in person than you can make a visit to our office.</p>
                </center>

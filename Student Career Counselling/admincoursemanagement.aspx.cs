@@ -60,9 +60,6 @@ namespace Student_Career_Counselling
             getCourseByID();
         }
 
-
-
-
         // user defined functions
 
         void getCourseByID()
@@ -75,7 +72,7 @@ namespace Student_Career_Counselling
                     con.Open();
                 }
 
-                SqlCommand cmd = new SqlCommand("SELECT * from course_master_table where course_id='" + TextBox1.Text.Trim() + "';", con);
+                SqlCommand cmd = new SqlCommand("SELECT * from course_master_tbl where course_id='" + TextBox1.Text.Trim() + "';", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -88,8 +85,6 @@ namespace Student_Career_Counselling
                 {
                     Response.Write("<script>alert('Course with this ID does not exist.');</script>");
                 }
-
-
             }
             catch (Exception ex)
             {
@@ -108,7 +103,7 @@ namespace Student_Career_Counselling
                     con.Open();
                 }
 
-                SqlCommand cmd = new SqlCommand("SELECT * from course_master_table where course_id='" + TextBox1.Text.Trim() + "';", con);
+                SqlCommand cmd = new SqlCommand("SELECT * from course_master_tbl where course_id='" + TextBox1.Text.Trim() + "';", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -121,8 +116,6 @@ namespace Student_Career_Counselling
                 {
                     return false;
                 }
-
-
             }
             catch (Exception ex)
             {
@@ -141,17 +134,13 @@ namespace Student_Career_Counselling
                     con.Open();
                 }
 
-                SqlCommand cmd = new SqlCommand("INSERT INTO course_master_table(course_id,course_name) values(@course_id,@course_name)", con);
-
+                SqlCommand cmd = new SqlCommand("INSERT INTO course_master_tbl(course_id,course_name) values(@course_id,@course_name)", con);
                 cmd.Parameters.AddWithValue("@course_id", TextBox1.Text.Trim());
                 cmd.Parameters.AddWithValue("@course_name", TextBox2.Text.Trim());
-
-
                 cmd.ExecuteNonQuery();
                 con.Close();
                 Response.Write("<script>alert('Course added successfully.');</script>");
                 GridView1.DataBind();
-
             }
             catch (Exception ex)
             {
@@ -168,15 +157,12 @@ namespace Student_Career_Counselling
                 {
                     con.Open();
                 }
-
-
-                SqlCommand cmd = new SqlCommand("update course_master_table set course_name=@course_name WHERE course_id='" + TextBox1.Text.Trim() + "'", con);
-                cmd.Parameters.AddWithValue("@ourse_name", TextBox2.Text.Trim());
+                SqlCommand cmd = new SqlCommand("update course_master_tbl set course_name=@course_name WHERE course_id='" + TextBox1.Text.Trim() + "'", con);
+                cmd.Parameters.AddWithValue("@course_name", TextBox2.Text.Trim());
                 int result = cmd.ExecuteNonQuery();
                 con.Close();
                 if (result > 0)
                 {
-
                     Response.Write("<script>alert('Course Updated Successfully');</script>");
                     GridView1.DataBind();
                 }
@@ -201,9 +187,7 @@ namespace Student_Career_Counselling
                 {
                     con.Open();
                 }
-
-
-                SqlCommand cmd = new SqlCommand("Delete from course_master_table WHERE course_id='" + TextBox1.Text.Trim() + "'", con);
+                SqlCommand cmd = new SqlCommand("Delete from course_master_tbl WHERE course_id='" + TextBox1.Text.Trim() + "'", con);
                 int result = cmd.ExecuteNonQuery();
                 con.Close();
                 if (result > 0)
@@ -223,6 +207,5 @@ namespace Student_Career_Counselling
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
         }
-
     }
 }

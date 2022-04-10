@@ -11,7 +11,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <img width="150px" src="imgs/userLogin.png"/>
+                           <img  src="imgs/userLogin.png" alt="HTML Icon"; Width="150";/>
                         </center>
                      </div>
                   </div>

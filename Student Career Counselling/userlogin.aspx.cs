@@ -30,20 +30,25 @@ namespace Student_Career_Counselling
                     con.Open();
 
                 }
-                SqlCommand cmd = new SqlCommand("select * from member_master_table where member_id='" + TextBox1.Text.Trim() + "' AND password='" + TextBox2.Text.Trim() + "'", con);
+                SqlCommand cmd = new SqlCommand("select * from member_master_tbl where member_id='" + TextBox1.Text.Trim() + "' AND password='" + TextBox2.Text.Trim() + "'", con);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {
                     while (dr.Read())
                     {
-                        Response.Write("<script>alert('" + dr.GetValue(8).ToString() + "');</script>");
+                        //Response.Write("<script>alert('" + dr.GetValue(8).ToString() + "');</script>");
+                        Response.Write("<script>alert('Successful login');</script>");
+                        Session["username"] = dr.GetValue(0).ToString();
+                        Session["member_id"] = dr.GetValue(5).ToString();
+                        Session["role"] = "user";
+                        Session["status"] = dr.GetValue(7).ToString();
                     }
+                    Response.Redirect("homepage.aspx");
                 }
                 else
                 {
                     Response.Write("<script>alert('Invalid credentials');</script>");
                 }
-
             }
             catch (Exception ex)
             {

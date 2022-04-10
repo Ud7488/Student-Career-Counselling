@@ -23,28 +23,30 @@ namespace Student_Career_Counselling
             getMemberByID();
         }
         // Active button
-        protected void LinkButton1_Click(object sender, EventArgs e)
+        protected void LinkButton1_Click1(object sender, EventArgs e)
         {
             updateMemberStatusByID("active");
         }
+
         // pending button
-        protected void LinkButton2_Click(object sender, EventArgs e)
+        protected void LinkButton2_Click1(object sender, EventArgs e)
         {
             updateMemberStatusByID("pending");
         }
+        
         // deactive button
-        protected void LinkButton3_Click(object sender, EventArgs e)
+        protected void LinkButton3_Click1(object sender, EventArgs e)
         {
             updateMemberStatusByID("deactive");
         }
+        
         // delete button
-        protected void Button2_Click(object sender, EventArgs e)
+        protected void Button2_Click1(object sender, EventArgs e)
         {
             deleteMemberByID();
         }
-
+  
         // user defined function
-
         bool checkIfMemberExists()
         {
             try
@@ -121,14 +123,13 @@ namespace Student_Career_Counselling
                     con.Open();
 
                 }
-                SqlCommand cmd = new SqlCommand("select * from member_master_tbl where member_id='" + TextBox1.Text.Trim() + "'", con);
+                SqlCommand cmd = new SqlCommand("select full_name,dob,contact_no,email,hobbies,interest,marks,full_address from member_master_tbl where member_id='" + TextBox1.Text.Trim() + "'", con);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {
                     while (dr.Read())
                     {
                         TextBox2.Text = dr.GetValue(0).ToString();
-                        TextBox7.Text = dr.GetValue(10).ToString();
                         TextBox8.Text = dr.GetValue(1).ToString();
                         TextBox3.Text = dr.GetValue(2).ToString();
                         TextBox4.Text = dr.GetValue(3).ToString();
@@ -188,7 +189,6 @@ namespace Student_Career_Counselling
         {
             TextBox1.Text = "";
             TextBox2.Text = "";
-            TextBox7.Text = "";
             TextBox8.Text = "";
             TextBox3.Text = "";
             TextBox4.Text = "";
@@ -197,6 +197,5 @@ namespace Student_Career_Counselling
             TextBox11.Text = "";
             TextBox6.Text = "";
         }
-
     }
 }

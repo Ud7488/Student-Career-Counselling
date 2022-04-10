@@ -1,5 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="userprofile.aspx.cs" Inherits="Student_Career_Counselling.userprofile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
+    });
+</script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -11,7 +16,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <img width="100px" src="imgs/userLogin.png"/>
+                           <img src="imgs/userLogin.png" alt="HTML Icon"; Width="100"; />
                         </center>
                      </div>
                   </div>
@@ -51,7 +56,7 @@
                         </div>
                      </div>
                      <div class="col-md-6">
-                        <label>Email ID</label>
+                        <label>Email </label>
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Email ID" TextMode="Email"></asp:TextBox>
                         </div>
@@ -59,31 +64,64 @@
                   </div>
                   <div class="row">
                      <div class="col-md-4">
-                        <label>State</label>
+                        <label>Hobbies</label>
                         <div class="form-group">
-                           <asp:DropDownList class="form-control" ID="DropDownList1" runat="server">
+                           <asp:DropDownList class="form-control" ID="DropDownList2" runat="server">
                               <asp:ListItem Text="Select" Value="select" />
+                              <asp:ListItem Text="Singing" Value="Singing" />
+                              <asp:ListItem Text="Reading" Value="Reading" />
+                              <asp:ListItem Text="Travelling" Value="Travelling" />
+                              <asp:ListItem Text="Writing" Value="Writing" />
+                              <asp:ListItem Text="Learning New Languages" Value="Learning New Languages" />
+                              <asp:ListItem Text="Blogging" Value="Blogging" />
+                              <asp:ListItem Text="Social Media Marketing" Value="Social Media Marketing" />
+                              <asp:ListItem Text="Sports" Value="Sports" />
+                              <asp:ListItem Text="Creating Music" Value="Creating Music" />
+                              <asp:ListItem Text="Outdoor Activities" Value="Outdoor Activities" />
+                              <asp:ListItem Text="Theater" Value="Theater" />
+                              <asp:ListItem Text="Art" Value="Art" />
+                              <asp:ListItem Text="Video Gaming" Value="Video Gaming" />
+                              <asp:ListItem Text="Yoga" Value="Yoga" />
+                               <asp:ListItem Text="Mindfulness" Value="Mindfulness" />
+                              <asp:ListItem Text="Calligraphy" Value="Calligraphy" />
+                              <asp:ListItem Text="Sketching" Value="Sketching" />
+                              <asp:ListItem Text="Public Speaking" Value="Public Speaking" />
+                              <asp:ListItem Text="Dancing" Value="Dancing" />
+                              <asp:ListItem Text="Gardening" Value="Gardening" />
+                             </asp:DropDownList>
+                        </div>
+                     </div>
+                       <div class="col-md-4">
+                        <label>Interest</label>
+                        <div class="form-group">
+                           <asp:DropDownList class="form-control" ID="DropDownList3" runat="server">
                               <asp:ListItem Text="Select" Value="select" />
-                              <asp:ListItem Text="Province No.1" Value="Province No.1" />
-                              <asp:ListItem Text="Bagmati Pradesh" Value="Bagmati Pradesh" />
-                              <asp:ListItem Text="Lumbini Pradesh" Value="Lumbini Pradesh" />
-                              <asp:ListItem Text="Gandaki Pradesh" Value="Gandaki Pradesh" />
-                              <asp:ListItem Text="Karnali Pradesh" Value="Karnali Pradesh" />
-                              <asp:ListItem Text="Madhesh Pradesh" Value="Madhesh Pradesh" />
-                              <asp:ListItem Text="Sudurpashchim Pradesh" Value="Sudurpashchim Pradesh" />
-                           </asp:DropDownList>
+                              <asp:ListItem Text="Web Design" Value="Web Design" />
+                              <asp:ListItem Text="Teaching" Value="Teaching" />
+                              <asp:ListItem Text="Life Science" Value="Life Science" />
+                              <asp:ListItem Text="Sociology" Value="Sociology" />
+                              <asp:ListItem Text="Research" Value="Research" />
+                              <asp:ListItem Text="Railway Studies" Value="Railway Studies" />
+                              <asp:ListItem Text="Psychology" Value="Psychology" />
+                              <asp:ListItem Text="Physics" Value="Physics" />
+                              <asp:ListItem Text="Microbiology" Value="Microbiology" />
+                              <asp:ListItem Text="Mathematics" Value="Mathematics" />
+                              <asp:ListItem Text="History" Value="History" />
+                              <asp:ListItem Text="Geography" Value="Geography" />
+                              <asp:ListItem Text="Aerospace" Value="Aerospace" />
+                              <asp:ListItem Text="Animation" Value="Animation" />
+                              <asp:ListItem Text="Astronomy" Value="Astronomy" />
+                              <asp:ListItem Text="Archaeology" Value="Archaeology" />
+                              <asp:ListItem Text="Chemistry" Value="Chemistry" />
+                              <asp:ListItem Text="Medical Science" Value="Medical Science" />
+                              <asp:ListItem Text="Enterprenurship" Value="Enterprenurship" />
+                             </asp:DropDownList>
                         </div>
                      </div>
                      <div class="col-md-4">
-                        <label>City</label>
+                        <label>SEE Scored Marks</label>
                         <div class="form-group">
-                           <asp:TextBox class="form-control" ID="TextBox6" runat="server" placeholder="City"></asp:TextBox>
-                        </div>
-                     </div>
-                     <div class="col-md-4">
-                        <label>Pincode</label>
-                        <div class="form-group">
-                           <asp:TextBox class="form-control" ID="TextBox7" runat="server" placeholder="Pincode" TextMode="Number"></asp:TextBox>
+                            <asp:TextBox class="form-control" ID="TextBox6" runat="server" TextMode="Number"></asp:TextBox>
                         </div>
                      </div>
                   </div>
@@ -104,21 +142,21 @@
                   </div>
                   <div class="row">
                      <div class="col-md-4">
-                        <label>User ID</label>
+                        <label>Member ID</label>
                         <div class="form-group">
-                           <asp:TextBox class="form-control" ID="TextBox8" runat="server" placeholder="User ID" ReadOnly="True"></asp:TextBox>
+                           <asp:TextBox class="form-control" ID="TextBox8" runat="server" placeholder="Member ID" ReadOnly="True"></asp:TextBox>
                         </div>
                      </div>
                      <div class="col-md-4">
                         <label>Old Password</label>
                         <div class="form-group">
-                           <asp:TextBox class="form-control" ID="TextBox9" runat="server" placeholder="Email ID" TextMode="Password" ReadOnly="True"></asp:TextBox>
+                           <asp:TextBox class="form-control" ID="TextBox9" runat="server" placeholder="Old Password" ReadOnly="True"></asp:TextBox>
                         </div>
                      </div>
                      <div class="col-md-4">
                         <label>New Password</label>
                         <div class="form-group">
-                           <asp:TextBox class="form-control" ID="TextBox10" runat="server" placeholder="Email ID" TextMode="Password"></asp:TextBox>
+                           <asp:TextBox class="form-control" ID="TextBox10" runat="server" placeholder="New Password" TextMode="Password"></asp:TextBox>
                         </div>
                      </div>
                   </div>
@@ -126,14 +164,13 @@
                      <div class="col-8 mx-auto">
                         <center>
                            <div class="form-group">
-                              <asp:Button class="btn btn-primary btn-block btn-lg" ID="Button1" runat="server" Text="Update" />
+                              <asp:Button class="btn btn-primary btn-block btn-lg" ID="Button1" runat="server" Text="Update" OnClick="Button1_Click1" />
                            </div>
                         </center>
                      </div>
                   </div>
                </div>
             </div>
-            <a href="homepage.aspx"><< Back to Home</a><br><br>
          </div>
          <div class="col-md-7">
             <div class="card">
@@ -141,15 +178,8 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <img width="100px" src="imgs/books1.png"/>
-                        </center>
-                     </div>
-                  </div>
-                  <div class="row">
-                     <div class="col">
-                        <center>
-                           <h4>Your Issued Books</h4>
-                           <asp:Label class="badge badge-pill badge-info" ID="Label2" runat="server" Text="your books info"></asp:Label>
+                           <h4>Your Suggested Colleges</h4>
+                           <asp:Label class="badge badge-pill badge-info" ID="Label2" runat="server" Text="Your Suggestions"></asp:Label>
                         </center>
                      </div>
                   </div>
@@ -159,10 +189,21 @@
                      </div>
                   </div>
                   <div class="row">
-                     <div class="col">
-                        <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server"></asp:GridView>
+                      <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:counsellingDBConnectionString %>" SelectCommand="SELECT * FROM [college_suggestion_tbl]"></asp:SqlDataSource>
+                      <div class="col">
+                        <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+                            <Columns>
+                                <asp:BoundField DataField="member_id" HeaderText="member_id" SortExpression="member_id" />
+                                <asp:BoundField DataField="member_name" HeaderText="member_name" SortExpression="member_name" />
+                                <asp:BoundField DataField="college_id" HeaderText="college_id" SortExpression="college_id" />
+                                <asp:BoundField DataField="college_name" HeaderText="college_name" SortExpression="college_name" />
+                                <asp:BoundField DataField="course_id" HeaderText="course_id" SortExpression="course_id" />
+                                <asp:BoundField DataField="course_name" HeaderText="course_name" SortExpression="course_name" />
+                            </Columns>
+                        </asp:GridView>
                      </div>
                   </div>
+
                </div>
             </div>
          </div>

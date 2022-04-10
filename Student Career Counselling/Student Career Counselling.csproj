@@ -44,6 +44,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.DebuggerVisualizers, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -53,6 +56,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -67,16 +71,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminContact.aspx" />
     <Content Include="admincounselormanagement.aspx" />
     <Content Include="admincollegeinventory.aspx" />
     <Content Include="admincollegesuggestions.aspx" />
     <Content Include="adminlogin.aspx" />
     <Content Include="adminmembermanagement.aspx" />
     <Content Include="admincoursemanagement.aspx" />
+    <Content Include="AdminTest.aspx" />
+    <Content Include="basicquestion.aspx" />
     <Content Include="bootstrap\CSS\bootstrap.min.css" />
     <Content Include="bootstrap\JS\bootstrap.min.js" />
     <Content Include="bootstrap\JS\jquery-3.3.1.slim.min.js" />
     <Content Include="bootstrap\JS\popper.min.js" />
+    <Content Include="ContactUs.aspx" />
     <Content Include="CSS\customstylesheet.css" />
     <Content Include="datatables\CSS\jquery.dataTables.min.css" />
     <Content Include="datatables\JS\jquery.dataTables.min.js" />
@@ -1867,20 +1875,31 @@
     <Content Include="homepage.aspx" />
     <Content Include="imgs\adminLogin.jpg" />
     <Content Include="imgs\Career counselling.jpg" />
+    <Content Include="imgs\clear.jfif" />
     <Content Include="imgs\college.png" />
     <Content Include="imgs\counselling.png" />
     <Content Include="imgs\counselor.jpg" />
     <Content Include="imgs\courses.jfif" />
     <Content Include="imgs\memberSignUp.jfif" />
+    <Content Include="imgs\perfecto.jpg" />
     <Content Include="imgs\sccIcon.jpg" />
     <Content Include="imgs\userLogin.png" />
     <Content Include="imgs\visit.png" />
     <Content Include="userlogin.aspx" />
     <Content Include="userprofile.aspx" />
     <Content Include="usersignup.aspx" />
+    <Content Include="viewcollege.aspx" />
+    <Content Include="viewcourse.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminContact.aspx.cs">
+      <DependentUpon>AdminContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminContact.aspx.designer.cs">
+      <DependentUpon>AdminContact.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admincounselormanagement.aspx.cs">
       <DependentUpon>admincounselormanagement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1923,6 +1942,27 @@
     <Compile Include="admincoursemanagement.aspx.designer.cs">
       <DependentUpon>admincoursemanagement.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminTest.aspx.cs">
+      <DependentUpon>AdminTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminTest.aspx.designer.cs">
+      <DependentUpon>AdminTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="basicquestion.aspx.cs">
+      <DependentUpon>basicquestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="basicquestion.aspx.designer.cs">
+      <DependentUpon>basicquestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="homepage.aspx.cs">
       <DependentUpon>homepage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1958,6 +1998,20 @@
     </Compile>
     <Compile Include="usersignup.aspx.designer.cs">
       <DependentUpon>usersignup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewcollege.aspx.cs">
+      <DependentUpon>viewcollege.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewcollege.aspx.designer.cs">
+      <DependentUpon>viewcollege.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewcourse.aspx.cs">
+      <DependentUpon>viewcourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewcourse.aspx.designer.cs">
+      <DependentUpon>viewcourse.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

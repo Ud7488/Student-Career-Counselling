@@ -14,3 +14,23 @@
 #footer2 {
     background: #531f00;
 }
+
+.style1 {
+    width: 211px;
+}
+
+.style2 {
+    width: 224px;
+}
+
+.style3 {
+    width: 224px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.style4 {
+    width: 211px;
+    font-weight: bold;
+    text-decoration: underline;
+} 

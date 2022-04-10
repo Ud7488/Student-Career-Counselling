@@ -1,28 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="admincollegeinventory.aspx.cs" Inherits="Student_Career_Counselling.admincollegeinventory" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
- <script type="text/javascript">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">>
+   <script type="text/javascript">
        $(document).ready(function () {
            $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
        });
-
-       function readURL(input) {
-           if (input.files && input.files[0]) {
-               var reader = new FileReader();
-
-               reader.onload = function (e) {
-                   $('#imgview').attr('src', e.target.result);
-               };
-
-               reader.readAsDataURL(input.files[0]);
-           }
-       }
-
- </script>
+   </script>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    
-   <div class="container-fluid">
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="container-fluid">
       <div class="row">
          <div class="col-md-5">
             <div class="card">
@@ -37,7 +22,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <img width="100px" src="imgs/college.png" />
+                           <img id="imgview" Height="150px" Width="100px" src="imgs/college.png" />
                         </center>
                      </div>
                   </div>
@@ -47,79 +32,24 @@
                      </div>
                   </div>
                   <div class="row">
-                     <div class="col-md-3">
+                     <div class="col-12">
                         <label>College ID</label>
                         <div class="form-group">
                            <div class="input-group">
-                              <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="ID"></asp:TextBox>
-                              <asp:LinkButton class="btn btn-primary" ID="LinkButton4" runat="server"><i class="fas fa-check-circle"></i></asp:LinkButton>
+                              <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="College ID"></asp:TextBox>
+                              <asp:Button class="form-control btn btn-primary" ID="Button4" runat="server" Text="Go" OnClick="Button4_Click" />
                            </div>
                         </div>
                      </div>
-                     <div class="col-md-9">
+                  </div>
+                  <div class="row">
+                     <div class="col-12">
                         <label>College Name</label>
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="College Name"></asp:TextBox>
                         </div>
                      </div>
-                  </div>
-                  <div class="row">
-                     <div class="col-md-4">
-                        <label>Telephone</label>
-                        <div class="form-group">
-                            <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="College No."></asp:TextBox>
-                        </div>
-                        <label>Course Name</label>
-                        <div class="form-group">
-                           <asp:DropDownList class="form-control" ID="DropDownList2" runat="server">
-                              <asp:ListItem Text="Publisher 1" Value="Publisher 1" />
-                              <asp:ListItem Text="Publisher 2" Value="Publisher 2" />
-                           </asp:DropDownList>
-                        </div>
-                     </div>
-                     <div class="col-md-4">
-                        <label>Counselor Name</label>
-                        <div class="form-group">
-                           <asp:DropDownList class="form-control" ID="DropDownList3" runat="server">
-                              <asp:ListItem Text="A1" Value="a1" />
-                              <asp:ListItem Text="a2" Value="a2" />
-                           </asp:DropDownList>
-                        </div>
-                        <label>Counselling Date</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Date" TextMode="Date"></asp:TextBox>
-                        </div>
-                     </div>
-                     <div class="col-md-4">
-                        <label>Counselor List</label>
-                        <div class="form-group">
-                           <asp:ListBox CssClass="form-control" ID="ListBox1" runat="server" SelectionMode="Single" Rows="1">
-                              <asp:ListItem Text="Ram Sharma" Value="Ram Sharma" />
-                              <asp:ListItem Text="Kripa Sharma" Value="Kripa Sharma" />
-                            </asp:ListBox>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="row">
-                     <div class="col-md-4">
-                        <label>Session</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" placeholder="Session"></asp:TextBox>
-                        </div>
-                     </div>
-                     <div class="col-md-4">
-                        <label>Cost(per session)</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox10" runat="server" placeholder="Counselling Cost(per session)" TextMode="Number"></asp:TextBox>
-                        </div>
-                     </div>
-                     <div class="col-md-4">
-                        <label>Selected College</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox7" runat="server" placeholder="Selected College" TextMode="Number" ReadOnly="True"></asp:TextBox>
-                        </div>
-                     </div>
-                  </div>
+                  </div>                 
                   <div class="row">
                      <div class="col-12">
                         <label>College Description</label>
@@ -130,13 +60,13 @@
                   </div>
                   <div class="row">
                      <div class="col-4">
-                        <asp:Button ID="Button1" class="btn btn-lg btn-block btn-success" runat="server" Text="Add" />
+                        <asp:Button ID="Button1" class="btn btn-lg btn-block btn-success" runat="server" Text="Add" OnClick="Button1_Click" />
                      </div>
                      <div class="col-4">
-                        <asp:Button ID="Button3" class="btn btn-lg btn-block btn-warning" runat="server" Text="Update" />
+                        <asp:Button ID="Button3" class="btn btn-lg btn-block btn-warning" runat="server" Text="Update" OnClick="Button3_Click" />
                      </div>
                      <div class="col-4">
-                        <asp:Button ID="Button2" class="btn btn-lg btn-block btn-danger" runat="server" Text="Delete" />
+                        <asp:Button ID="Button2" class="btn btn-lg btn-block btn-danger" runat="server" Text="Delete" OnClick="Button2_Click" />
                      </div>
                   </div>
                </div>
@@ -155,14 +85,21 @@
                      </div>
                   </div>
                   <div class="row">
-                     <div class="col">
+                     <div class="col">             
                         <hr>
                      </div>
                   </div>
                   <div class="row">
-                      <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:counsellingDBConnectionString %>" SelectCommand="SELECT * FROM [college_master_tbl]"></asp:SqlDataSource>
+                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:counsellingDBConnectionString %>" SelectCommand="SELECT * FROM [college_master_tbl]"></asp:SqlDataSource>
                      <div class="col">
-                        <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server"></asp:GridView>
+                        <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="college_id" DataSourceID="SqlDataSource1">
+                           <Columns>
+                              <asp:BoundField DataField="college_id" HeaderText="college_id" ReadOnly="True" SortExpression="college_id" >
+                              </asp:BoundField>
+                               <asp:BoundField DataField="college_name" HeaderText="college_name" SortExpression="college_name" />
+                               <asp:BoundField DataField="college_description" HeaderText="college_description" SortExpression="college_description" />
+                           </Columns>
+                        </asp:GridView>
                      </div>
                   </div>
                </div>
@@ -170,5 +107,4 @@
          </div>
       </div>
    </div>
-
 </asp:Content>

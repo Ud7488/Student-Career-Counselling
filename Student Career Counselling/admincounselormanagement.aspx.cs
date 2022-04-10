@@ -19,7 +19,7 @@ namespace Student_Career_Counselling
         }
 
         // add button click
-        protected void Button2_Click(object sender, EventArgs e)
+        protected void Button2_Click1(object sender, EventArgs e)
         {
             if (checkIfCounselorExists())
             {
@@ -30,8 +30,9 @@ namespace Student_Career_Counselling
                 addNewCounselor();
             }
         }
+
         // update button click
-        protected void Button3_Click(object sender, EventArgs e)
+        protected void Button3_Click1(object sender, EventArgs e)
         {
             if (checkIfCounselorExists())
             {
@@ -43,8 +44,9 @@ namespace Student_Career_Counselling
                 Response.Write("<script>alert('Counselor does not exist');</script>");
             }
         }
+
         // delete button click
-        protected void Button4_Click(object sender, EventArgs e)
+        protected void Button4_Click1(object sender, EventArgs e)
         {
             if (checkIfCounselorExists())
             {
@@ -57,12 +59,10 @@ namespace Student_Career_Counselling
             }
         }
         // GO button click
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void Button1_Click1(object sender, EventArgs e)
         {
             getCounselorByID();
         }
-
-
 
         // user defined function
         void getCounselorByID()
@@ -88,8 +88,6 @@ namespace Student_Career_Counselling
                 {
                     Response.Write("<script>alert('Invalid Counselor ID');</script>");
                 }
-
-
             }
             catch (Exception ex)
             {
@@ -97,7 +95,6 @@ namespace Student_Career_Counselling
 
             }
         }
-
 
         void deleteCounselor()
         {
@@ -178,8 +175,6 @@ namespace Student_Career_Counselling
             }
         }
 
-
-
         bool checkIfCounselorExists()
         {
             try
@@ -203,8 +198,6 @@ namespace Student_Career_Counselling
                 {
                     return false;
                 }
-
-
             }
             catch (Exception ex)
             {
