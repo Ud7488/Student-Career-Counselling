@@ -45,6 +45,19 @@
                         <label>Password</label>
                         <div class="form-group">
                            <asp:TextBox class="form-control" ID="TextBox2" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                            <asp:RequiredFieldValidator 
+                                ID="RequiredFieldValidator1" 
+                                runat="server" 
+                                ErrorMessage="Please Enter Password"    
+                                ControlToValidate="TextBox2">
+                            </asp:RequiredFieldValidator>  
+                            <asp:RegularExpressionValidator 
+                                ID="RegularExpressionValidator1" 
+                                runat="server" 
+                                ErrorMessage="Enter Strong Password"  
+                                ValidationExpression="^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!*@#$%^&+=]).*$"  
+                                ControlToValidate="TextBox2">
+                            </asp:RegularExpressionValidator>
                         </div>
                      </div>
                    </div>
@@ -73,6 +86,13 @@
                            <label>Email ID</label>
                            <div class="form-group">
                                <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server" placeholder="Email ID" TextMode="Email"></asp:TextBox>
+                               <asp:RegularExpressionValidator 
+                                   ID="RegEmail"
+                                   ControlToValidate="TextBox6"
+                                   ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" 
+                                   runat="server" 
+                                   ErrorMessage="Enter valid Email Address">
+                               </asp:RegularExpressionValidator>
                            </div>
                        </div>
                    </div>

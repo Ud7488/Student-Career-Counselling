@@ -59,6 +59,13 @@
                         <label>Email </label>
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Email ID" TextMode="Email"></asp:TextBox>
+                            <asp:RegularExpressionValidator 
+                                   ID="RegEmail"
+                                   ControlToValidate="TextBox4"
+                                   ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" 
+                                   runat="server" 
+                                   ErrorMessage="Enter valid Email Address">
+                               </asp:RegularExpressionValidator>
                         </div>
                      </div>
                   </div>
@@ -157,6 +164,19 @@
                         <label>New Password</label>
                         <div class="form-group">
                            <asp:TextBox class="form-control" ID="TextBox10" runat="server" placeholder="New Password" TextMode="Password"></asp:TextBox>
+                            <asp:RequiredFieldValidator 
+                                ID="RequiredFieldValidator1" 
+                                runat="server" 
+                                ErrorMessage="Please Enter Password"    
+                                ControlToValidate="TextBox10">
+                            </asp:RequiredFieldValidator>  
+                            <asp:RegularExpressionValidator 
+                                ID="RegularExpressionValidator1" 
+                                runat="server" 
+                                ErrorMessage="Please Enter Strong Password"  
+                                ValidationExpression="^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!*@#$%^&+=]).*$"  
+                                ControlToValidate="TextBox10">
+                            </asp:RegularExpressionValidator>
                         </div>
                      </div>
                   </div>
@@ -199,6 +219,8 @@
                                 <asp:BoundField DataField="college_name" HeaderText="college_name" SortExpression="college_name" />
                                 <asp:BoundField DataField="course_id" HeaderText="course_id" SortExpression="course_id" />
                                 <asp:BoundField DataField="course_name" HeaderText="course_name" SortExpression="course_name" />
+                                <asp:BoundField DataField="counselor_id" HeaderText="counselor_id" SortExpression="counselor_id" />
+                                <asp:BoundField DataField="counselor_name" HeaderText="counselor_name" SortExpression="counselor_name" />
                             </Columns>
                         </asp:GridView>
                      </div>

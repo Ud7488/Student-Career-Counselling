@@ -109,7 +109,7 @@
 				    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:counsellingDBConnectionString %>' SelectCommand="SELECT * FROM [college_suggestion_tbl]">
 					    </asp:SqlDataSource>
 					        <div class="col">
-							    <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="member_id" DataSourceID="SqlDataSource1">
+							    <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
 								    <Columns>
 									    <asp:BoundField DataField="member_id" HeaderText="member_id" SortExpression="member_id"></asp:BoundField>
 										<asp:BoundField DataField="member_name" HeaderText="member_name" SortExpression="member_name"></asp:BoundField>
@@ -117,6 +117,8 @@
 										<asp:BoundField DataField="college_name" HeaderText="college_name" SortExpression="college_name"></asp:BoundField>
 										<asp:BoundField DataField="course_id" HeaderText="course_id" SortExpression="course_id"></asp:BoundField>
 										<asp:BoundField DataField="course_name" HeaderText="course_name" SortExpression="course_name"></asp:BoundField>
+									    <asp:BoundField DataField="counselor_id" HeaderText="counselor_id" SortExpression="counselor_id" />
+                                        <asp:BoundField DataField="counselor_name" HeaderText="counselor_name" SortExpression="counselor_name" />
 									</Columns>
 								</asp:GridView>
 							</div>

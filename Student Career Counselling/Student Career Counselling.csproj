@@ -75,6 +75,7 @@
     <Content Include="admincounselormanagement.aspx" />
     <Content Include="admincollegeinventory.aspx" />
     <Content Include="admincollegesuggestions.aspx" />
+    <Content Include="AdminEvents.aspx" />
     <Content Include="adminlogin.aspx" />
     <Content Include="adminmembermanagement.aspx" />
     <Content Include="admincoursemanagement.aspx" />
@@ -88,6 +89,7 @@
     <Content Include="CSS\customstylesheet.css" />
     <Content Include="datatables\CSS\jquery.dataTables.min.css" />
     <Content Include="datatables\JS\jquery.dataTables.min.js" />
+    <Content Include="Events.aspx" />
     <Content Include="fontawesome\css\all.css" />
     <Content Include="fontawesome\css\all.min.css" />
     <Content Include="fontawesome\css\brands.css" />
@@ -1921,6 +1923,13 @@
     <Compile Include="admincollegesuggestions.aspx.designer.cs">
       <DependentUpon>admincollegesuggestions.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminEvents.aspx.cs">
+      <DependentUpon>AdminEvents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminEvents.aspx.designer.cs">
+      <DependentUpon>AdminEvents.aspx</DependentUpon>
+    </Compile>
     <Compile Include="adminlogin.aspx.cs">
       <DependentUpon>adminlogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1962,6 +1971,13 @@
     </Compile>
     <Compile Include="ContactUs.aspx.designer.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Events.aspx.cs">
+      <DependentUpon>Events.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Events.aspx.designer.cs">
+      <DependentUpon>Events.aspx</DependentUpon>
     </Compile>
     <Compile Include="homepage.aspx.cs">
       <DependentUpon>homepage.aspx</DependentUpon>
