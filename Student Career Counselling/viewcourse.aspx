@@ -18,7 +18,7 @@
                    <div class="row">
                      <div class="col">
                         <center>
-                           <img width="100px" src="imgs/courses.jfif" />
+                           <img src="imgs/courses.jfif" alt="HTML Icon"; width="100";/>
                         </center>
                      </div>
                   </div>
@@ -40,17 +40,17 @@
 
     <section>
       <div class="container">
-      <div class="container">
          <div class="row">
             <div class="col-8">
                <center>
                   <h4>Science</h4>
                   <p class="text-justify">If a person is always eager to know how things work or why they work that way, then Ten Plus Two Science was created for them. This course provides an explanation of how human beings function and how the world around them operates, helping students in the particular field to use this knowledge to develop society and country. </p>
                    <p class="text-justify">The course includes subjects such as Biology, Chemistry, Computer, Mathematics and Physics. Also, this course is for students who want to pursue higher education in areas such as agriculture, forestry, medicine and natural sciences among other related science professions.</p>
+                   <p class="text-justify">Some courses for Bachelor - BE/B.Tech-Bachelor of Technology,B.Arch-Bachelor of Architecture,MBBS-Bachelor of Medicine and Bachelor of Surgery,BCA-Bachelor of Computer Applications,B.Sc.- Information Technology,B.Sc- Nursing,BPharma- Bachelor of Pharmacy,B.Sc- Interior Design,BDS- Bachelor of Dental Surgery,Animation, Graphics and Multimedia,B.Sc. – Nutrition & Dietetics,BPT- Bachelor of Physiotherapy,B.Sc- Applied Geology,BA/B.Sc. Liberal Arts,B.Sc.- Physics,B.Sc. Chemistry,B.Sc. Mathematics</p>
                </center>
             </div>
              <div class="col-4">
-               <img width="150px" src="imgs/counselling.png"/>
+               <img src="imgs/counselling.png" alt="HTML Icon"; width="150";/>
             </div>
          </div>
       </div>
@@ -64,16 +64,16 @@
                   <h4>Management</h4>
                   <p class="text-justify">The course is designed for students who want to pursue a career in accounting, management and entrepreneurship. With training in this course, students have a strong base to branch out into professions under accounting, business, hotel management and marketing, etc.</p>
                    <p class="text-justify">Students can then enhance the knowledge gained from this course with management courses at the Bachelor’s level or Bachelor of Business Administration (BBA), Bachelor of Business Studies, Bachelor of Hotel Management and Bachelor in Travel and Tourism Management (BTTM) among others.</p>
+                   <p class="text-justify">Some courses for Bachelors Degree - B.Com-Bachelor of Commerce, BBA-Bachelor of Bussiness Administration, B.Com(Hons)Integrated Law Program-B.Com LL.BIntegrated Law Program- BBA LL.B</p>
                </center>
             </div>
              <div class="col-4">
-               <img width="150px" src="imgs/counselling.png"/>
+               <img src="imgs/counselling.png" alt="HTML Icon"; width="150";/>
             </div>
          </div>
       </div>
     </section>
     <section>
-      <div class="container">
       <div class="container">
          <div class="row">
             <div class="col-8">
@@ -86,13 +86,12 @@
                </center>
             </div>
              <div class="col-4">
-               <img width="150px" src="imgs/counselling.png"/>
+               <img src="imgs/counselling.png" alt="HTML Icon"; width="150";/>
             </div>
          </div>
       </div>
     </section>
     <section>
-      <div class="container">
       <div class="container">
          <div class="row">
             <div class="col-8">
@@ -100,16 +99,16 @@
                   <h4>Humanities</h4>
                   <p class="text-justify">Humanities take students back in time and give them a glimpse of ancient art, ancestry, culture, customs, lifestyle, language and much more. Besides, it covers themes on humanism, hospitality and co-existence in society. It spans subjects such as Literature, Mass Communication/Journalism, Rural Economics, Population Studies and Sociology among others.</p>
                    <p class="text-justify">However, not many pursue this stream in Nepal and some students take it for granted. The stream is ideal for those who wish to pursue a career in social work or any profession which serves society at large.</p>
+                   <p class="text-justify">Some courses for Bachelor - BBA- Bachelor of Business Administration,BMS- Bachelor of Management Science,BFA- Bachelor of Fine Arts,BEM- Bachelor of Event Management,Integrated Law Course- BA + LL.B,BJMC- Bachelor of Journalism and Mass Communication,BFD- Bachelor of Fashion Designing,BSW- Bachelor of Social Work,BBS- Bachelor of Business Studies,BTTM- Bachelor of Travel and Tourism Management,Aviation Courses,B.Sc- Interior Design,B.Sc.- Hospitality and Hotel Administration,Bachelor of Design (B. Design),Bachelor of Performing Arts, BA in History</p>
                </center>
             </div>
              <div class="col-4">
-               <img width="150px" src="imgs/counselling.png"/>
+               <img src="imgs/counselling.png" alt="HTML Icon"; width="150";/>
             </div>
          </div>
       </div>
     </section>
     <section>
-      <div class="container">
       <div class="container">
          <div class="row">
             <div class="col-8">
@@ -121,13 +120,12 @@
                </center>
             </div>
              <div class="col-4">
-               <img width="150px" src="imgs/counselling.png"/>
+               <img src="imgs/counselling.png" alt="HTML Icon"; width="150";/>
             </div>
          </div>
       </div>
     </section>
     <section>
-      <div class="container">
       <div class="container">
          <div class="row">
             <div class="col-8">
@@ -136,6 +134,7 @@
                   <p class="text-justify">Students can also opt for technical/vocational training through the Council for Technical Education and Vocational Training (CTEVT). The CTEVT covers more than 51 Diploma/TSLC courses in areas such as Agriculture, Engineering, Health, Hotel Management and Medicine among others.</p>
                   <p class="text-justify">These programs are designed to recognize and hone the skills of various students and fine-tune them according to the needs of the job market.Students can enroll in various Bachelor Level programs after this course.</p>
                   <p>Following are the different courses offered under CTEVT:</p>
+                   <ul>    
                        <li>1. Diploma in Agriculture (Plant Science)</li>
                        <li>2. Diploma in Agriculture (Veterinary Science)</li>
                        <li>3. Diploma in Architecture Engineering</li>
@@ -144,17 +143,16 @@
                        <li>6. Diploma in Computer Engineering</li>
                        <li>6. Diploma in Computer Hardware/Network Engineering among others</li>
                    </ul>
+                   <p class="text-justify">Bachelors can be done in the similar feild.</p>
                </center>
             </div>
              <div class="col-4">
-               <img width="150px" src="imgs/counselling.png"/>
+               <img src="imgs/counselling.png" alt="HTML Icon"; width="150";/>
             </div>
          </div>
       </div>
     </section>
 
-            <a href="homepage.aspx"><< Back to Home</a><br>
-            <br>
          </div>
       </div>
    </div>
