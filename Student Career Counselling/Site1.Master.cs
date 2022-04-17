@@ -21,6 +21,7 @@ namespace Student_Career_Counselling
                     LinkButton3.Visible = false; // logout link button
                     LinkButton7.Visible = false; // hello user link button
                     LinkButton15.Visible = false; // test form of the user
+                    LinkButton14.Visible = false; // event form for user
 
 
                     LinkButton6.Visible = true; // admin login link button
@@ -31,7 +32,8 @@ namespace Student_Career_Counselling
                     LinkButton10.Visible = false; // member management link button
                     LinkButton4.Visible = false; // contact us link button
                     LinkButton13.Visible = false; // admin test form of the user
-                    
+                    LinkButton16.Visible = false; // admin test form of the user
+
                 }
 
                 else if (Session["role"].Equals("user"))
@@ -41,6 +43,7 @@ namespace Student_Career_Counselling
 
                     LinkButton3.Visible = true; // logout link button
                     LinkButton15.Visible = true; // test form for the user
+                    LinkButton14.Visible = true; // event form of the user
                     LinkButton7.Visible = true; // hello user link button
                     LinkButton7.Text = "Hello " + Session["username"].ToString();
 
@@ -52,6 +55,7 @@ namespace Student_Career_Counselling
                     LinkButton10.Visible = false; // member management link button
                     LinkButton4.Visible = false; // contact us link button
                     LinkButton13.Visible= false; // admin test form 
+                    LinkButton16.Visible = false; // admin event form of the user
 
                 }
                 else if (Session["role"].Equals("admin"))
@@ -59,6 +63,7 @@ namespace Student_Career_Counselling
                     LinkButton1.Visible = false; // user login link button
                     LinkButton2.Visible = false; // sign up link button
                     LinkButton15.Visible = false; // test form for the user
+                    LinkButton14.Visible = false; // event form of the user
 
                     LinkButton3.Visible = true; // logout link button
                     LinkButton7.Visible = true; // hello user link button
@@ -73,6 +78,7 @@ namespace Student_Career_Counselling
                     LinkButton10.Visible = true; // member management link button
                     LinkButton4.Visible = true; // contact us link button
                     LinkButton13.Visible = true; // admin test form
+                    LinkButton16.Visible = true; // admin event form of the user
                 }
             }
             catch (Exception ex)
@@ -133,6 +139,9 @@ namespace Student_Career_Counselling
 
             LinkButton1.Visible = true; // user login link button
             LinkButton2.Visible = true; // sign up link button
+            LinkButton15.Visible = false; // test form for the user
+            LinkButton14.Visible = false; // event form of the user
+
 
             LinkButton3.Visible = false; // logout link button
             LinkButton7.Visible = false; // hello user link button
@@ -146,6 +155,7 @@ namespace Student_Career_Counselling
             LinkButton10.Visible = false; // member management link button
             LinkButton4.Visible = false; // contact us link button
             LinkButton15.Visible = false; // test form
+            LinkButton16.Visible = false; // admin event form of the user
 
             Response.Redirect("homepage.aspx");
         }
@@ -175,6 +185,16 @@ namespace Student_Career_Counselling
         protected void LinkButton13_Click(object sender, EventArgs e)
         {
             Response.Redirect("AdminTest.aspx");
+        }
+
+        protected void LinkButton14_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Events.aspx");
+        }
+
+        protected void LinkButton16_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdminEvents.aspx");
         }
     }
 }
