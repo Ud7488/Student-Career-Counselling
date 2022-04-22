@@ -28,14 +28,14 @@ namespace Student_Career_Counselling
                     con.Open();
                 }
 
-                SqlCommand cmd = new SqlCommand("INSERT INTO event_tbl(event_name,event_link,event_description,scholar_name,scholar_link,scholar_description) values(@event_name,@event_link,@event_description,@scholar_name,@scholar_link,@scholar_description)", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO event_tbl(event_name,event_link,event_desc,scholar_name,scholar_link,scholar_desc) values(@event_name,@event_link,@event_desc,@scholar_name,@scholar_link,@scholar_desc)", con);
 
                 cmd.Parameters.AddWithValue("@event_name", TextBox2.Text.Trim());
                 cmd.Parameters.AddWithValue("@event_link", TextBox3.Text.Trim());
-                cmd.Parameters.AddWithValue("@event_description", TextBox4.Text.Trim());
+                cmd.Parameters.AddWithValue("@event_desc", TextBox4.Text.Trim());
                 cmd.Parameters.AddWithValue("@scholar_name", TextBox1.Text.Trim());
                 cmd.Parameters.AddWithValue("@scholar_link", TextBox5.Text.Trim());
-                cmd.Parameters.AddWithValue("@scholar_description", TextBox6.Text.Trim());
+                cmd.Parameters.AddWithValue("@scholar_desc", TextBox6.Text.Trim());
 
                 cmd.ExecuteNonQuery();
                 con.Close();

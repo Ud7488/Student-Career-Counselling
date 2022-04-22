@@ -128,7 +128,7 @@
                      <div class="col-md-4">
                         <label>SEE Scored Marks</label>
                         <div class="form-group">
-                            <asp:TextBox class="form-control" ID="TextBox6" runat="server" TextMode="Number"></asp:TextBox>
+                            <asp:TextBox class="form-control" ID="TextBox6" runat="server" ></asp:TextBox>
                         </div>
                      </div>
                   </div>
